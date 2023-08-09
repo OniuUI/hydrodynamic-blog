@@ -28,6 +28,10 @@ EXPOSE 80 443
 # Copy the build directory from the previous step to the nginx html directory
 COPY --from=build /app/build /usr/share/nginx/html
 
+# Copy the certificates from host to the container
+COPY /etc/letsencrypt/live/blog.hydrodynamic.no/fullchain.pem /etc/nginx/cert.pem
+COPY /etc/letsencrypt/live/blog.hydrodynamic.no/privkey.pem /etc/nginx/key.pem
+
 # Copy the self-signed certificate and private key
 COPY --from=build /app/cert.pem /etc/nginx/cert.pem
 COPY --from=build /app/key.pem /etc/nginx/key.pem

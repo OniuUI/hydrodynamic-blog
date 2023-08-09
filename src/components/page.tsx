@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
-import iconImage from './img/logo-png-white.png';  // Change 'path-to-your-image' to your actual image path
+import iconImage from './img/logo-png-white.png';
 
 const ComingSoon: React.FC = () => {
     const [timeLeft, setTimeLeft] = useState<{
@@ -38,14 +38,19 @@ const ComingSoon: React.FC = () => {
             <a href="https://hydrodynamic.no" target="_blank" rel="noopener noreferrer">
                 <img src={iconImage} alt="Hydro Dynamics" className="redirect-icon" />
             </a>
-            <h1>Our blog is</h1>
-            <h2>Coming Soon</h2>
-            <p>Stay tuned for something amazing!</p>
+            <div className="title-wrapper">
+                <span className="top-title">Our blog is</span>
+                <div className="sweet-title">
+                    <span data-text="Coming">Coming </span>
+                    <span data-text="Soon">Soon!</span>
+                </div>
+                <span className="bottom-title">Stay tuned for something amazing!</span>
+            </div>
             <div className="countdown">
                 {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
             </div>
         </div>
-    );
+        );
 };
 
 export default ComingSoon;

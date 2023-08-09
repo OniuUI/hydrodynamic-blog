@@ -34,7 +34,7 @@ const ComingSoon: React.FC = () => {
 
     return (
         <div className="coming-soon-container">
-            <h1>Our website is</h1>
+            <h1>Our blog is</h1>
             <h2>Coming Soon</h2>
             <p>Stay tuned for something amazing!</p>
             <div className="countdown">

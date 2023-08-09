@@ -1,0 +1,31 @@
+.coming-soon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #a5a5a5;
+}
+
+.countdown {
+    margin-top: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}

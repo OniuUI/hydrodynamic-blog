@@ -26,8 +26,9 @@ EXPOSE 80 443
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Copy the certificates from host to the container
-COPY /etc/letsencrypt/live/blog.hydrodynamic.no/fullchain.pem /etc/nginx/cert.pem
-COPY /etc/letsencrypt/live/blog.hydrodynamic.no/privkey.pem /etc/nginx/key.pem
+COPY certs/fullchain.pem /etc/nginx/cert.pem
+COPY certs/privkey.pem /etc/nginx/key.pem
+
 
 # Remove the default nginx configuration
 RUN rm /etc/nginx/conf.d/default.conf

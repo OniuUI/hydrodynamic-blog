@@ -30,3 +30,11 @@ p {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
+.redirect-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 180px;  /* Adjust size as needed */
+    cursor: pointer;
+}
